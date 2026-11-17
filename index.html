@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Your Foundation | Website preview</title>
+<meta name="description" content="A design preview for a new nonprofit foundation website. Demo content only.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#faf6ef; --paper:#fffdf9; --ink:#1f2a25; --soft:#5b665f; --line:#e6ddcf;
+  --green:#1f4d3d; --green2:#2f6b55; --clay:#c8643c; --clay2:#a94e2b; --sand:#f1e7d6;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:600;line-height:1.15;margin:0 0 .5em;letter-spacing:-.01em}
+h1{font-size:clamp(2.2rem,5.4vw,4rem)}
+h2{font-size:clamp(1.7rem,3.4vw,2.5rem)}
+h3{font-size:1.25rem}
+p{margin:0 0 1em}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.demo{background:var(--ink);color:#f3ecdf;font-size:13px;text-align:center;padding:8px 16px}
+.demo b{color:#f0b392}
+header{position:sticky;top:0;z-index:20;background:rgba(250,246,239,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:Fraunces,serif;font-size:1.2rem;font-weight:600}
+.mark{width:34px;height:34px;border-radius:50%;background:var(--green);display:grid;place-items:center}
+.mark:after{content:"";width:14px;height:14px;border-radius:50% 50% 50% 0;background:#f0b392;transform:rotate(-45deg)}
+nav{display:flex;align-items:center;gap:26px}
+nav a{text-decoration:none;font-size:.93rem;font-weight:500;color:var(--soft);padding:6px 0;border-bottom:2px solid transparent}
+nav a:hover,nav a.on{color:var(--ink);border-color:var(--clay)}
+.btn{display:inline-block;background:var(--clay);color:#fff!important;border:0;border-radius:999px;padding:12px 24px;font:600 .95rem Inter,sans-serif;text-decoration:none;cursor:pointer;transition:background .2s,transform .2s}
+.btn:hover{background:var(--clay2);transform:translateY(-1px)}
+.btn.ghost{background:transparent;color:var(--green)!important;box-shadow:inset 0 0 0 1.5px var(--green)}
+.btn.ghost:hover{background:var(--green);color:#fff!important}
+nav .btn{padding:9px 20px;border-bottom:0}
+#burger{display:none;background:none;border:0;font-size:26px;cursor:pointer;color:var(--ink)}
+.page{display:none;animation:in .45s ease}
+.page.show{display:block}
+@keyframes in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+section{padding:72px 0}
+.eyebrow{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--clay);font-weight:600;margin-bottom:14px}
+.lead{font-size:1.15rem;color:var(--soft);max-width:60ch}
+.hero{padding:64px 0 72px}
+.hero .grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.photo{border-radius:22px;min-height:260px;background:linear-gradient(140deg,#2f6b55,#1f4d3d 55%,#c8643c 140%);position:relative;overflow:hidden;display:grid;place-items:end start}
+.photo:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 75% 25%,rgba(240,179,146,.55),transparent 45%)}
+.photo span{position:relative;margin:16px;background:rgba(255,253,249,.9);color:var(--ink);font-size:12px;padding:5px 10px;border-radius:999px}
+.photo.tall{min-height:440px}
+.photo.b{background:linear-gradient(160deg,#c8643c,#e0a27f 60%,#f1e7d6)}
+.photo.c{background:linear-gradient(160deg,#3d5a80,#1f4d3d)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+.stat{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:20px}
+.stat b{font:600 1.9rem Fraunces,serif;color:var(--green);display:block}
+.stat small{color:var(--soft)}
+.band{background:var(--green);color:#f3ecdf}
+.band h2{color:#fff}
+.band .lead{color:#cfe0d6}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:36px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:26px;transition:transform .25s,box-shadow .25s}
+.card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(31,42,37,.08)}
+.card p{color:var(--soft);margin:0}
+.icon{width:44px;height:44px;border-radius:12px;background:var(--sand);display:grid;place-items:center;font-size:20px;margin-bottom:16px}
+.card .photo{min-height:170px;border-radius:12px;margin-bottom:18px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+blockquote{margin:0;font:400 1.5rem/1.4 Fraunces,serif;border-left:3px solid var(--clay);padding-left:22px}
+.person .photo{min-height:240px;border-radius:14px;margin-bottom:16px}
+.person small{color:var(--clay);font-weight:600}
+.tag{display:inline-block;font-size:.75rem;background:var(--sand);border-radius:999px;padding:3px 10px;margin-bottom:10px;color:var(--soft)}
+.give{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:30px;box-shadow:0 20px 44px rgba(31,42,37,.07)}
+.seg{display:grid;grid-template-columns:1fr 1fr;background:var(--sand);border-radius:999px;padding:4px;margin-bottom:18px}
+.seg button{border:0;background:none;padding:10px;border-radius:999px;font:600 .9rem Inter;cursor:pointer;color:var(--soft)}
+.seg button.on{background:var(--green);color:#fff}
+.amts{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:12px}
+.amts button{border:1.5px solid var(--line);background:#fff;border-radius:12px;padding:14px 0;font:600 1rem Inter;cursor:pointer;transition:.15s}
+.amts button.on,.amts button:hover{border-color:var(--clay);background:#fdf1ea;color:var(--clay2)}
+label{display:block;font-size:.85rem;font-weight:600;margin:14px 0 6px}
+input,textarea,select{width:100%;border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;font:inherit;background:#fff;color:var(--ink)}
+input:focus,textarea:focus,select:focus{outline:0;border-color:var(--green2)}
+.give .btn,form .btn{width:100%;margin-top:20px;padding:15px}
+.impact{font-size:.9rem;color:var(--soft);background:var(--sand);border-radius:12px;padding:12px 14px;margin-top:14px}
+.ok{display:none;background:#e7f1ec;border:1px solid #b9d6c8;color:var(--green);border-radius:14px;padding:18px;margin-top:16px}
+.ok.show{display:block;animation:in .4s}
+.wall{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.wall span{background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:.9rem}
+.note{font-size:.82rem;color:var(--soft);margin-top:12px}
+footer{background:var(--ink);color:#cfc8ba;padding:52px 0 28px;font-size:.92rem}
+footer .cols{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px}
+footer h3{color:#fff;font-size:1.05rem}
+footer a{display:block;text-decoration:none;margin-bottom:6px;color:#cfc8ba}
+footer a:hover{color:#fff}
+.fine{border-top:1px solid #36423c;margin-top:36px;padding-top:18px;font-size:.8rem;color:#8f9a93}
+@media (max-width:860px){
+  .hero .grid,.two,.cards,footer .cols{grid-template-columns:1fr}
+  .photo.tall{min-height:280px}
+  #burger{display:block}
+  nav{display:none;position:absolute;top:68px;left:0;right:0;background:var(--bg);flex-direction:column;align-items:flex-start;padding:18px 20px 24px;gap:14px;border-bottom:1px solid var(--line)}
+  nav.open{display:flex}
+  section{padding:52px 0}
+  .stats{grid-template-columns:1fr}
+  .amts{grid-template-columns:repeat(2,1fr)}
+}
+</style>
+</head>
+<body>
+<div class="demo"><b>Design preview.</b> Built for this job post. Name, text and photos are placeholders until the foundation sends its own.</div>
+
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="#/"><span class="mark"></span>Your Foundation</a>
+    <button id="burger" aria-label="Menu">&#9776;</button>
+    <nav id="nav">
+      <a href="#/">Home</a>
+      <a href="#/about">About</a>
+      <a href="#/programs">Programs</a>
+      <a href="#/team">Our Team</a>
+      <a href="#/news">News</a>
+      <a href="#/contact">Contact</a>
+      <a class="btn" href="#/donate">Donate</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- HOME -->
+<div class="page" data-page="">
+  <section class="hero"><div class="wrap grid">
+    <div>
+      <div class="eyebrow">A new foundation</div>
+      <h1>Care, dignity and a helping hand for every neighbour.</h1>
+      <p class="lead">This is where the foundation's one-line mission goes. Short, warm, and clear about who you help and why it matters.</p>
+      <div class="cta">
+        <a class="btn" href="#/donate">Donate now</a>
+        <a class="btn ghost" href="#/donate" data-jump="volunteer">Volunteer with us</a>
+      </div>
+    </div>
+    <div class="photo tall"><span>Your main photo goes here</span></div>
+  </div></section>
+
+  <section class="band"><div class="wrap two">
+    <div>
+      <div class="eyebrow" style="color:#f0b392">Our purpose</div>
+      <h2>Why this foundation exists</h2>
+      <p class="lead">Two or three sentences about the need you saw and the change you want to make. Written in the founder's own voice.</p>
+      <a class="btn" href="#/about">Read our story</a>
+    </div>
+    <blockquote style="color:#fff;border-color:#f0b392">"A short, heartfelt line from the founder sits here and sets the tone for the whole site."</blockquote>
+  </div></section>
+
+  <section><div class="wrap">
+    <div class="eyebrow">Get involved</div>
+    <h2>Three ways to stand with us</h2>
+    <div class="cards">
+      <div class="card"><div class="icon">&#10084;</div><h3>Give</h3><p>One-time or monthly gifts. Every donor gets a thank-you and a receipt.</p><p style="margin-top:14px"><a href="#/donate"><b>Donate &rarr;</b></a></p></div>
+      <div class="card"><div class="icon">&#9995;</div><h3>Volunteer</h3><p>Share your time or skills. Fill a short form and we will be in touch.</p><p style="margin-top:14px"><a href="#/donate" data-jump="volunteer"><b>Sign up &rarr;</b></a></p></div>
+      <div class="card"><div class="icon">&#129309;</div><h3>Partner</h3><p>Sponsorships for businesses, churches, schools and community groups.</p><p style="margin-top:14px"><a href="#/contact"><b>Talk to us &rarr;</b></a></p></div>
+    </div>
+  </div></section>
+</div>
+
+<!-- ABOUT -->
+<div class="page" data-page="about">
+  <section><div class="wrap two">
+    <div class="photo tall b"><span>Founder's photo goes here</span></div>
+    <div>
+      <div class="eyebrow">About us</div>
+      <h1>Our story</h1>
+      <p class="lead">How the foundation began, what inspired it, and the people it was created for.</p>
+      <h3>A message from the founder</h3>
+      <p>The founder's personal message goes here, with a short profile underneath. It reads like a letter, not a brochure.</p>
+    </div>
+  </div></section>
+  <section class="band"><div class="wrap">
+    <h2>Mission, vision and values</h2>
+    <div class="cards">
+      <div class="card" style="color:var(--ink)"><h3>Mission</h3><p>What you do every day, and for whom.</p></div>
+      <div class="card" style="color:var(--ink)"><h3>Vision</h3><p>The future you are working toward.</p></div>
+      <div class="card" style="color:var(--ink)"><h3>Values</h3><p>Compassion. Dignity. Honesty. Community.</p></div>
+    </div>
+  </div></section>
+</div>
+
+<!-- PROGRAMS -->
+<div class="page" data-page="programs">
+  <section><div class="wrap">
+    <div class="eyebrow">Programs &amp; initiatives</div>
+    <h1>What we do</h1>
+    <p class="lead">Each focus area gets its own card. New projects can be added later from the dashboard, no developer needed.</p>
+    <div class="cards">
+      <div class="card"><div class="photo"><span>Photo</span></div><span class="tag">Focus area</span><h3>Advocacy</h3><p>Speaking up for people who are not being heard.</p></div>
+      <div class="card"><div class="photo b"><span>Photo</span></div><span class="tag">Focus area</span><h3>Awareness</h3><p>Campaigns and education that change minds.</p></div>
+      <div class="card"><div class="photo c"><span>Photo</span></div><span class="tag">Focus area</span><h3>Community outreach</h3><p>Showing up in person, where the need is.</p></div>
+      <div class="card"><div class="photo c"><span>Photo</span></div><span class="tag">Focus area</span><h3>Support</h3><p>Practical help for individuals and families.</p></div>
+      <div class="card" style="border-style:dashed;display:grid;place-items:center;text-align:center"><div><h3>Future project</h3><p>Space kept ready for what comes next.</p></div></div>
+    </div>
+  </div></section>
+</div>
+
+<!-- TEAM -->
+<div class="page" data-page="team">
+  <section><div class="wrap">
+    <div class="eyebrow">Our team</div>
+    <h1>The people behind the work</h1>
+    <p class="lead">Founder, board and leadership. Adding a new person later is one form: name, role, photo, short bio.</p>
+    <div class="cards">
+      <div class="person"><div class="photo b"><span>Photo</span></div><small>Founder</small><h3>Founder's name</h3><p>Short biography, two or three lines.</p></div>
+      <div class="person"><div class="photo"><span>Photo</span></div><small>Board member</small><h3>Board member</h3><p>Short biography, two or three lines.</p></div>
+      <div class="person"><div class="photo c"><span>Photo</span></div><small>Leadership</small><h3>Team member</h3><p>Short biography, two or three lines.</p></div>
+    </div>
+  </div></section>
+</div>
+
+<!-- DONATE -->
+<div class="page" data-page="donate">
+  <section><div class="wrap two" style="align-items:start">
+    <div>
+      <div class="eyebrow">Donate &amp; get involved</div>
+      <h1>Your gift does real work.</h1>
+      <p class="lead">Try it: pick an amount, add a name and press the button. Then scroll down to the donor wall.</p>
+      <div class="give">
+        <div class="seg"><button class="on" data-f="one-time">One-time</button><button data-f="monthly">Monthly</button></div>
+        <div class="amts">
+          <button data-a="25">$25</button><button data-a="50" class="on">$50</button><button data-a="100">$100</button><button data-a="250">$250</button>
+        </div>
+        <input id="custom" type="number" min="1" placeholder="Other amount ($)">
+        <div class="impact" id="impact"></div>
+        <label for="dn">Your name</label><input id="dn" placeholder="Shown on the donor wall">
+        <label for="de">Email for your receipt</label><input id="de" type="email" placeholder="you@example.com">
+        <button class="btn" id="give">Give $50</button>
+        <div class="ok" id="dok"></div>
+        <p class="note">Demo only. No card is charged. On the real site this button opens a secure card form (Stripe or PayPal). Until the foundation's payment account is approved, it can collect pledges like this so no donor is turned away.</p>
+      </div>
+      <h3 style="margin-top:34px">Donor wall</h3>
+      <div class="wall" id="wall"></div>
+    </div>
+    <div id="volunteer">
+      <div class="give" style="box-shadow:none">
+        <h2>Volunteer or partner</h2>
+        <p style="color:var(--soft)">Tell us how you would like to help.</p>
+        <form id="vform">
+          <label>Name</label><input required name="n">
+          <label>Email</label><input required type="email" name="e">
+          <label>I would like to</label>
+          <select name="t"><option>Volunteer my time</option><option>Sponsor a program</option><option>Partner as an organisation</option></select>
+          <label>A few words</label><textarea rows="3" name="m"></textarea>
+          <button class="btn" style="background:var(--green)">Send</button>
+          <div class="ok" id="vok">Thank you. On the real site this lands in the foundation's inbox and in the dashboard.</div>
+        </form>
+      </div>
+    </div>
+  </div></section>
+</div>
+
+<!-- NEWS -->
+<div class="page" data-page="news">
+  <section><div class="wrap">
+    <div class="eyebrow">Blog, news &amp; resources</div>
+    <h1>Updates from the foundation</h1>
+    <p class="lead">Publishing a new post works like writing an email: title, text, photo, publish.</p>
+    <div class="cards">
+      <div class="card"><div class="photo"><span>Photo</span></div><span class="tag">Announcement</span><h3>The foundation is officially launched</h3><p>Sample post. Your first update goes here.</p></div>
+      <div class="card"><div class="photo b"><span>Photo</span></div><span class="tag">Awareness</span><h3>An article that explains the cause</h3><p>Sample post. Educational articles and campaigns.</p></div>
+      <div class="card"><div class="photo c"><span>Photo</span></div><span class="tag">Event</span><h3>Upcoming community event</h3><p>Sample post. Dates, photos and videos.</p></div>
+    </div>
+  </div></section>
+</div>
+
+<!-- CONTACT -->
+<div class="page" data-page="contact">
+  <section><div class="wrap two" style="align-items:start">
+    <div>
+      <div class="eyebrow">Contact</div>
+      <h1>We would love to hear from you.</h1>
+      <p class="lead">Questions, ideas, or a story to share.</p>
+      <p><b>Email</b><br>hello@yourfoundation.org</p>
+      <p><b>Follow</b><br>Facebook &middot; Instagram &middot; YouTube</p>
+    </div>
+    <div class="give">
+      <form id="cform">
+        <label>Name</label><input required>
+        <label>Email</label><input required type="email">
+        <label>Message</label><textarea rows="5" required></textarea>
+        <button class="btn">Send message</button>
+        <div class="ok" id="cok">Message received. On the real site this is emailed to the foundation, with spam protection on.</div>
+      </form>
+    </div>
+  </div></section>
+</div>
+</main>
+
+<footer><div class="wrap">
+  <div class="cols">
+    <div><h3>Your Foundation</h3><p>One line about the mission. Registered nonprofit details go here once available.</p></div>
+    <div><h3>Explore</h3><a href="#/about">About</a><a href="#/programs">Programs</a><a href="#/team">Our Team</a><a href="#/news">News</a></div>
+    <div><h3>Act</h3><a href="#/donate">Donate</a><a href="#/donate" data-jump="volunteer">Volunteer</a><a href="#/contact">Contact</a></div>
+  </div>
+  <div class="fine">Design preview by Muntazir. Not a live charity site. No payments are taken here.</div>
+</div></footer>
+
+<script>
+(function(){
+  var pages=[].slice.call(document.querySelectorAll('.page')),links=[].slice.call(document.querySelectorAll('nav a')),nav=document.getElementById('nav'),jump=null;
+  function route(){
+    var p=(location.hash.replace(/^#\/?/,'')||'');
+    var found=pages.some(function(x){return x.dataset.page===p});
+    if(!found)p='';
+    pages.forEach(function(x){x.classList.toggle('show',x.dataset.page===p)});
+    links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#/'+p&&!a.classList.contains('btn'))});
+    nav.classList.remove('open');
+    if(jump){var el=document.getElementById(jump);jump=null;if(el){setTimeout(function(){el.scrollIntoView({behavior:'smooth',block:'start'})},60);return}}
+    window.scrollTo(0,0);
+  }
+  document.addEventListener('click',function(e){
+    var a=e.target.closest('[data-jump]');
+    if(a){jump=a.dataset.jump;if(location.hash==='#/donate')route()}
+  });
+  window.addEventListener('hashchange',route);
+  document.getElementById('burger').onclick=function(){nav.classList.toggle('open')};
+
+  // Donation demo
+  var amt=50,freq='one-time',give=document.getElementById('give'),impact=document.getElementById('impact'),custom=document.getElementById('custom'),wall=document.getElementById('wall');
+  var seed=[{n:'A. Friend',a:100,f:'one-time'},{n:'The Okafor Family',a:50,f:'monthly'},{n:'Anonymous',a:25,f:'one-time'}];
+  function load(){try{return JSON.parse(localStorage.getItem('demoDonors'))||[]}catch(e){return[]}}
+  function save(d){try{localStorage.setItem('demoDonors',JSON.stringify(d))}catch(e){}}
+  function esc(s){var d=document.createElement('div');d.textContent=s;return d.innerHTML}
+  function draw(){
+    wall.innerHTML=load().concat(seed).map(function(d){return '<span><b>'+esc(d.n)+'</b> &middot; $'+d.a+(d.f==='monthly'?' / month':'')+'</span>'}).join('');
+  }
+  function upd(){
+    give.textContent='Give $'+amt+(freq==='monthly'?' every month':'');
+    impact.textContent='Sample line: "$'+amt+(freq==='monthly'?' a month':'')+' helps us reach more families." The foundation writes its own for each amount.';
+  }
+  document.querySelectorAll('.seg button').forEach(function(b){b.onclick=function(){
+    document.querySelectorAll('.seg button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');freq=b.dataset.f;upd()}});
+  var ab=document.querySelectorAll('.amts button');
+  ab.forEach(function(b){b.onclick=function(){ab.forEach(function(x){x.classList.remove('on')});b.classList.add('on');custom.value='';amt=+b.dataset.a;upd()}});
+  custom.oninput=function(){var v=Math.floor(+custom.value);if(v>0){ab.forEach(function(x){x.classList.remove('on')});amt=v;upd()}};
+  give.onclick=function(){
+    var n=document.getElementById('dn').value.trim()||'Anonymous',d=load();
+    d.unshift({n:n.slice(0,40),a:amt,f:freq});save(d.slice(0,12));draw();
+    var ok=document.getElementById('dok');
+    ok.innerHTML='<b>Thank you, '+esc(n)+'.</b> Your '+freq+' gift of $'+amt+' is on the donor wall below. It stays there if you refresh the page.';
+    ok.classList.add('show');
+  };
+  [['vform','vok'],['cform','cok']].forEach(function(p){
+    document.getElementById(p[0]).onsubmit=function(e){e.preventDefault();document.getElementById(p[1]).classList.add('show');e.target.reset()};
+  });
+  upd();draw();route();
+})();
+</script>
+</body>
+</html>
