@@ -50,7 +50,7 @@ section{padding:72px 0}
 .hero .grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
 .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
 .photo{border-radius:22px;min-height:260px;background:linear-gradient(140deg,#2f6b55,#1f4d3d 55%,#c8643c 140%);position:relative;overflow:hidden;display:grid;place-items:end start}
-.photo:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 75% 25%,rgba(240,179,146,.55),transparent 45%)}
+.photo{background-size:cover!important;background-position:center 25%!important}
 .photo span{position:relative;margin:16px;background:rgba(255,253,249,.9);color:var(--ink);font-size:12px;padding:5px 10px;border-radius:999px}
 .photo.tall{min-height:440px}
 .photo.b{background:linear-gradient(160deg,#c8643c,#e0a27f 60%,#f1e7d6)}
@@ -109,7 +109,7 @@ footer a:hover{color:#fff}
 </style>
 </head>
 <body>
-<div class="demo"><b>Design preview.</b> Built for this job post. Name, text and photos are placeholders until the foundation sends its own.</div>
+<div class="demo"><b>Design preview.</b> Built for this job post. Name, text and photos are samples until the foundation sends its own.</div>
 
 <header>
   <div class="wrap bar">
@@ -140,7 +140,7 @@ footer a:hover{color:#fff}
         <a class="btn ghost" href="#/donate" data-jump="volunteer">Volunteer with us</a>
       </div>
     </div>
-    <div class="photo tall"><span>Your main photo goes here</span></div>
+    <div class="photo tall" style="background-image:url(https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1200&q=70&auto=format&fit=crop)"><span>Sample photo</span></div>
   </div></section>
 
   <section class="band"><div class="wrap two">
@@ -167,7 +167,7 @@ footer a:hover{color:#fff}
 <!-- ABOUT -->
 <div class="page" data-page="about">
   <section><div class="wrap two">
-    <div class="photo tall b"><span>Founder's photo goes here</span></div>
+    <div class="photo tall b" style="background-image:url(https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=1200&q=70&auto=format&fit=crop)"><span>Sample photo</span></div>
     <div>
       <div class="eyebrow">About us</div>
       <h1>Our story</h1>
@@ -193,10 +193,10 @@ footer a:hover{color:#fff}
     <h1>What we do</h1>
     <p class="lead">Each focus area gets its own card. New projects can be added later from the dashboard, no developer needed.</p>
     <div class="cards">
-      <div class="card"><div class="photo"><span>Photo</span></div><span class="tag">Focus area</span><h3>Advocacy</h3><p>Speaking up for people who are not being heard.</p></div>
-      <div class="card"><div class="photo b"><span>Photo</span></div><span class="tag">Focus area</span><h3>Awareness</h3><p>Campaigns and education that change minds.</p></div>
-      <div class="card"><div class="photo c"><span>Photo</span></div><span class="tag">Focus area</span><h3>Community outreach</h3><p>Showing up in person, where the need is.</p></div>
-      <div class="card"><div class="photo c"><span>Photo</span></div><span class="tag">Focus area</span><h3>Support</h3><p>Practical help for individuals and families.</p></div>
+      <div class="card"><div class="photo" style="background-image:url(https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=700&q=70&auto=format&fit=crop)"><span>Sample photo</span></div><span class="tag">Focus area</span><h3>Advocacy</h3><p>Speaking up for people who are not being heard.</p></div>
+      <div class="card"><div class="photo b" style="background-image:url(https://images.unsplash.com/photo-1542810634-71277d95dcbb?w=700&q=70&auto=format&fit=crop)"><span>Sample photo</span></div><span class="tag">Focus area</span><h3>Awareness</h3><p>Campaigns and education that change minds.</p></div>
+      <div class="card"><div class="photo c" style="background-image:url(https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=700&q=70&auto=format&fit=crop)"><span>Sample photo</span></div><span class="tag">Focus area</span><h3>Community outreach</h3><p>Showing up in person, where the need is.</p></div>
+      <div class="card"><div class="photo c" style="background-image:url(https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=700&q=70&auto=format&fit=crop)"><span>Sample photo</span></div><span class="tag">Focus area</span><h3>Support</h3><p>Practical help for individuals and families.</p></div>
       <div class="card" style="border-style:dashed;display:grid;place-items:center;text-align:center"><div><h3>Future project</h3><p>Space kept ready for what comes next.</p></div></div>
     </div>
   </div></section>
@@ -209,9 +209,9 @@ footer a:hover{color:#fff}
     <h1>The people behind the work</h1>
     <p class="lead">Founder, board and leadership. Adding a new person later is one form: name, role, photo, short bio.</p>
     <div class="cards">
-      <div class="person"><div class="photo b"><span>Photo</span></div><small>Founder</small><h3>Founder's name</h3><p>Short biography, two or three lines.</p></div>
-      <div class="person"><div class="photo"><span>Photo</span></div><small>Board member</small><h3>Board member</h3><p>Short biography, two or three lines.</p></div>
-      <div class="person"><div class="photo c"><span>Photo</span></div><small>Leadership</small><h3>Team member</h3><p>Short biography, two or three lines.</p></div>
+      <div class="person"><div class="photo b" style="background-image:url(https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=700&q=70&auto=format&fit=crop)"><span>Sample photo</span></div><small>Founder</small><h3>Founder's name</h3><p>Short biography, two or three lines.</p></div>
+      <div class="person"><div class="photo" style="background-image:url(https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=700&q=70&auto=format&fit=crop)"><span>Sample photo</span></div><small>Board member</small><h3>Board member</h3><p>Short biography, two or three lines.</p></div>
+      <div class="person"><div class="photo c" style="background-image:url(https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=700&q=70&auto=format&fit=crop)"><span>Sample photo</span></div><small>Leadership</small><h3>Team member</h3><p>Short biography, two or three lines.</p></div>
     </div>
   </div></section>
 </div>
@@ -264,9 +264,9 @@ footer a:hover{color:#fff}
     <h1>Updates from the foundation</h1>
     <p class="lead">Publishing a new post works like writing an email: title, text, photo, publish.</p>
     <div class="cards">
-      <div class="card"><div class="photo"><span>Photo</span></div><span class="tag">Announcement</span><h3>The foundation is officially launched</h3><p>Sample post. Your first update goes here.</p></div>
-      <div class="card"><div class="photo b"><span>Photo</span></div><span class="tag">Awareness</span><h3>An article that explains the cause</h3><p>Sample post. Educational articles and campaigns.</p></div>
-      <div class="card"><div class="photo c"><span>Photo</span></div><span class="tag">Event</span><h3>Upcoming community event</h3><p>Sample post. Dates, photos and videos.</p></div>
+      <div class="card"><div class="photo" style="background-image:url(https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=700&q=70&auto=format&fit=crop)"><span>Sample photo</span></div><span class="tag">Announcement</span><h3>The foundation is officially launched</h3><p>Sample post. Your first update goes here.</p></div>
+      <div class="card"><div class="photo b" style="background-image:url(https://images.unsplash.com/photo-1542810634-71277d95dcbb?w=700&q=70&auto=format&fit=crop)"><span>Sample photo</span></div><span class="tag">Awareness</span><h3>An article that explains the cause</h3><p>Sample post. Educational articles and campaigns.</p></div>
+      <div class="card"><div class="photo c" style="background-image:url(https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=700&q=70&auto=format&fit=crop)"><span>Sample photo</span></div><span class="tag">Event</span><h3>Upcoming community event</h3><p>Sample post. Dates, photos and videos.</p></div>
     </div>
   </div></section>
 </div>
